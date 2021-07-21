@@ -1,0 +1,11 @@
+ <p> Hello <%= @customer.name %></p>
+ <div class="container" style="background:#ebf8f3; text-align: center; padding: 20px 0px">
+    <p> <h2> Order Uniq ID: <%= @order.uniq_order_id %> </h2> </p>
+    <p> <h4> Order Status: <%= @order.status %> </h4> </p>
+
+    <p> Please track your order with this link:</p>
+    <p><%= link_to 'Track order', track_order_orders_url({:order =>{uniq_order_id: @order.uniq_order_id}}) %></p>
+
+    <p> <%= @customer.name %>, thank you for your order! </p>
+ </div>
+ 

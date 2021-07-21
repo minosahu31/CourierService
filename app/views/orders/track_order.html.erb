@@ -1,0 +1,11 @@
+<% content_for :title, "Order Status" %>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <% if @order.present? %>
+        <h4>Status for the Order <%= @order.uniq_order_id %> is : <b><%= @order.status %></b></h2>   
+    <% else %>
+    <h4>No Order found with this ID: <%= @uniq_order_id %> </h2>   
+    <% end %>    
+</div>
+
+

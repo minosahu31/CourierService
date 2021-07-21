@@ -1,0 +1,18 @@
+<% content_for :title, "Search Order" %>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <%= form_for @order, method: :get, url: track_order_orders_path do |f| %>
+    <div class="col-lg-8">
+        <h2>Search Order</h2>
+        <div class="form-group">
+            <label>Uniq order ID</label>
+            <%= f.text_field :uniq_order_id, :placeholder => "Enter uniq order ID", :type => "number", :class => "form-control", :required => "" %>
+        </div>    
+    </div>
+    <div class="col-lg-4">
+        <div class="title-action">
+            <%= f.submit "Search", :class => "btn btn-sm btn-primary pull-right m-t-n-xs" %>
+        </div>
+    </div>
+    <% end %>   
+</div>
